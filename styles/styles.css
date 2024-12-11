@@ -1,0 +1,113 @@
+.product-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Container chứa thanh tìm kiếm và nút */
+.search-container {
+    display: flex; /* Sử dụng Flexbox để căn chỉnh nằm ngang */
+    align-items: center; /* Căn giữa theo trục dọc */
+    gap: 10px; /* Tạo khoảng cách giữa ô nhập liệu và nút */
+    max-width: 600px; /* Đặt chiều rộng tối đa */
+    margin: 0 auto; /* Căn giữa toàn bộ container */
+}
+
+/* Ô tìm kiếm */
+#search-box {
+    flex: 1; /* Chiếm toàn bộ không gian còn lại */
+    padding: 10px; /* Khoảng cách bên trong ô */
+    border: 1px solid #ccc; /* Viền ô nhập liệu */
+    border-radius: 4px; /* Bo góc */
+}
+
+/* Nút search */
+button.btn {
+    padding: 10px 20px; /* Khoảng cách trong nút */
+    border-radius: 4px; /* Bo góc nút */
+}
+
+/* Dropdown chỉnh căn chỉnh */
+#suggestions {
+    position: absolute; /* Tạo dropdown tuyệt đối */
+    top: 100%; /* Hiển thị ngay bên dưới ô nhập liệu */
+    left: 0; /* Căn trái với phần tử cha */
+    z-index: 1000;
+    width: 100%; /* Rộng bằng với ô nhập liệu */
+    max-height: 200px; /* Giới hạn chiều cao dropdown */
+    overflow-y: auto; /* Cuộn nếu danh sách dài */
+    border: 1px solid #ccc;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Mục trong dropdown */
+.dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* Style for red border */
+.error-border {
+    border-color: red;
+}
+.error-text {
+    color: red;
+    font-size: 0.875em;
+}
+
+/* Container giữ ảnh */
+.card-img-container {
+    width: 100%; /* Đảm bảo chiều rộng khớp với card */
+    height: 20em; /* Chiều cao cố định cho tất cả ảnh */
+    overflow: hidden; /* Ẩn phần ảnh vượt khung */
+    position: relative; /* Đặt làm gốc cho ảnh bên trong */
+}
+
+/* Ảnh bên trong */
+.card-img-top {
+    width: 50%; /* Đảm bảo chiều rộng ảnh vừa với card */
+    height: 100%; /* Chiều cao cố định, có thể điều chỉnh */
+    object-fit: scale-down;
+    object-position: center; /* Đặt trung tâm ảnh làm trọng tâm */
+    border-radius: 5px; /* (Tùy chọn) Bo góc để ảnh trông mềm mại hơn */
+}
+
+.container {
+    margin-top: 20px;
+    padding-bottom: 100px; /* Giữ khoảng trống dưới cùng để bạn có thể cuộn đến các phần tử phía dưới */
+}
+
+.navbar-nav .dropdown-menu {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border-radius: 8px;
+    padding: 10px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1050; /* Thêm z-index để đảm bảo dropdown nằm trên các phần tử khác */
+}
+
+/* Cải thiện dropdown-menu để không bị che khuất */
+.navbar-nav .dropdown-menu {
+    position: absolute; /* Đảm bảo dropdown được hiển thị tuyệt đối so với phần tử cha */
+    top: 100%; /* Đặt dropdown hiển thị ngay bên dưới menu */
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1050;
+}
+
+/* Tắt overflow cho phần tử chứa dropdown */
+.navbar-nav {
+    overflow: visible; /* Đảm bảo dropdown không bị cắt bớt */
+}
+
+
